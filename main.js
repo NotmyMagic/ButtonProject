@@ -1,10 +1,21 @@
 const container = document.querySelector(".container");
-const rangeRed = document.querySelector("#rangeRed");
-const rangeGreen = document.querySelector("#rangeGreen");
-const rangeBlue = document.querySelector("#rangeBlue");
 const largeRedButton = document.querySelector(".large red button");
-const clicks = document.querySelector("#clicks");
+let x = 1;
 
-largeRedButton.addEventListener("submit", onSubmit);
+function btnPressed(e) {
+  console.log("click");
+  let clicks = (document.querySelector("#clicks").innerHTML = `${x++}`);
+}
 
-function onSubmit(e) {}
+function colorChange() {
+  let red = document.querySelector("#rangeRed").value;
+  let green = document.querySelector("#rangeGreen").value;
+  let blue = document.querySelector("#rangeBlue").value;
+  let RGB = `rbg(${red}, ${green}, ${blue})`;
+  document.body.style.backgroundColor = RGB;
+  console.log(`(${red}, ${green}, ${blue})`);
+}
+
+document.getElementById("rangeRed").addEventListener("input", colorChange);
+document.getElementById("rangeGreen").addEventListener("input", colorChange);
+document.getElementById("rangeBlue").addEventListener("input", colorChange);
