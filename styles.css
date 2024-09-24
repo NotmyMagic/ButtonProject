@@ -1,0 +1,27 @@
+p,
+h2,
+input {
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  text-align: center;
+  background-color: rgb(105, 194, 152);
+}
+
+.container {
+  margin: 90px 250px;
+  padding: 120px 30px;
+  border: solid black;
+}
+
+P {
+  font-size: 25px;
+}
+
+.large-red-button {
+  background-color: red;
+  color: whitesmoke;
+  width: 100px;
+  height: 40px;
+}
