@@ -8,11 +8,13 @@ function btnPressed(e) {
 }
 
 function colorChange() {
-  let red = document.querySelector("#rangeRed").value;
+  let red = document.getElementById("rangeRed").value;
   let green = document.querySelector("#rangeGreen").value;
   let blue = document.querySelector("#rangeBlue").value;
   let RGB = `rbg(${red}, ${green}, ${blue})`;
-  document.body.style.backgroundColor = RGB;
+  let color = `rgb(${red}, ${green}, ${blue})`;
+  document.body.style.backgroundColor = color;
+
   console.log(`(${red}, ${green}, ${blue})`);
 }
 
